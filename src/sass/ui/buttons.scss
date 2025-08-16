@@ -1,0 +1,54 @@
+@use "/src/sass/base/mixins.scss" as *;
+@use "/src/sass/base/variables.scss" as *;
+
+.btn-default {
+  @include button;
+  width: 230px;
+  height: 50px;
+  font-size: 20px;
+  transition: 0.5s ease all;
+}
+.btn-send {
+  @include button;
+  width: 220px;
+  height: 40px;
+  font-size: 16px;
+  &:focus {
+    outline: 1px solid $Ceramic;
+    border: 1px solid $Ceramic;
+  }
+  &:disabled {
+    border-color: $ui-disabled;
+    color: $ui-disabled;
+    cursor: not-allowed;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .btn-default:hover {
+    background-color: $dark;
+    color: $Light;
+  }
+  .btn-default:active {
+    box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.4);
+    background: rgba(217, 217, 217, 0.1);
+    color: $dark;
+    border: none;
+  }
+  .btn-send {
+    &:active {
+      outline: 1px solid $Ceramic;
+      border: 1px solid $Ceramic;
+    }
+    &:hover {
+      color: $Ceramic;
+      border: 1px solid $Ceramic;
+    }
+
+  }
+}
+@media screen and (min-width: 1920px) {
+  .btn-default {
+    width: 330px;
+    height: 60px;
+  }
+}

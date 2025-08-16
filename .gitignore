@@ -1,0 +1,77 @@
+# === ОС ===
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# === Node / пакетные менеджеры ===
+node_modules/           # зависимости
+.pnp/                  # Yarn Plug'n'Play
+.pnp.js
+
+# lock-файлы (если используешь другой менеджер, оставь нужный и можно игнорировать остальное)
+# npm
+package-lock.json
+# yarn
+yarn.lock
+# pnpm
+pnpm-lock.yaml
+.pnpm-store/
+
+# === Сборки / артефакты ===
+dist/
+build/
+.out/
+.next/                  # для Next.js (если не хостишь серверный билд)
+.cache/                 # Vite / другие кэши
+/.turbo/                # если используешь TurboRepo
+*.local/                # временные сборки
+
+# === Конфигурации среды ===
+.env
+.env.*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# === Логи ===
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# === IDE / редакторы ===
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# === Типичные временные и системные файлы ===
+*.swp
+*~
+*.tmp
+*.temp
+
+# === Кэш инструментов ===
+/.vite/
+.cache/
+/sass-cache/
+/eslintcache
+
+# === TypeScript ===
+*.tsbuildinfo
+
+# === Статические экспорты (если используешь) ===
+out/
+
+# === Другое ===
+coverage/
+*.localhistory/
+*.log
+
+# === Файлы с секретами (на всякий случай) ===
+secret-*.json
+credentials.json
