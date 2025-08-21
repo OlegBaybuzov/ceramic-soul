@@ -1,0 +1,122 @@
+@use "/src/sass/base/variables.scss" as *;
+.footer {
+  margin-top: 60px;
+  padding: 50px 0 50px 0;
+  background: $dark;
+  color: rgba(250, 250, 250, 1);
+  font-size: 16px;
+  font-weight: 400;
+  &__text {
+    margin-top: 40px;
+  }
+  &__form {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  &__input {
+    margin-bottom: 20px;
+    width: 293px;
+    height: 32px;
+    background: transparent;
+    padding-bottom: 15px;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid $ui-active;
+    &:focus {
+      border-bottom: 1px solid $ui-active;
+      outline: none;
+    }
+    &::placeholder {
+      color: $ui-disabled;
+      font-size: 14px;
+    }
+  }
+  .git__label {
+    color: #fff;
+    margin: 0;
+  }
+  &__btn {
+    margin-top: 20px;
+  }
+  &__menu-wrapper {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 66px;
+  }
+  &__menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  &__social-media-wrapper {
+    margin-top: 40px;
+  }
+  &__social-media {
+    margin-top: 40px;
+    display: flex;
+    column-gap: 10px;
+  }
+  &__social-media-link {
+    width: 24px;
+    height: 24px;
+    text-decoration: none;
+    span {
+      color: rgba(255, 255, 255, 1);
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &::before {
+        margin: 0;
+      }
+    }
+  }
+  &__par {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    &__flex-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer {
+    &__flex-wrapper-for-all {
+      display: flex;
+      column-gap: 164px;
+    }
+    &__flex-wrapper {
+      column-gap: 163px;
+    }
+    &__menu-wrapper,
+    &__social-media-wrapper {
+      margin: 0;
+    }
+  }
+}
+@media screen and (min-width: 1920px) {
+  .footer {
+    padding-top: 80px;
+    margin-top: 100px;
+    &__flex-wrapper-for-all {
+      column-gap: 314px;
+    }
+    &__flex-wrapper {
+      column-gap: 313px;
+    }
+    &__par {
+      margin-top: 18px;
+    }
+  }
+}
