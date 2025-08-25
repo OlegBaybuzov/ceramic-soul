@@ -46,7 +46,7 @@
   .promo {
     &__potter {
       display: block;
-      width: clamp(450px, 37.5vw ,640px);
+      width: clamp(450px, 37.5vw, 640px);
       height: 633px;
       position: absolute;
       top: 0;
@@ -72,7 +72,6 @@
       margin: 50px auto 0 auto;
     }
     &__title {
-      
       padding: 384px 0 0 642px;
     }
     &__potter {

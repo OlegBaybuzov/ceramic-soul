@@ -37,6 +37,16 @@
     cursor: not-allowed;
   }
 }
+.btn-read {
+  @include button;
+  width: 145px;
+  height: 32px;
+  font-size: 14px;
+  &:focus {
+    outline: 1px solid $Ceramic;
+    border: 1px solid $Ceramic;
+  }
+}
 @media screen and (min-width: 1200px) {
   .btn-default:hover {
     background-color: $dark;
@@ -50,6 +60,16 @@
   }
   .btn-send {
     &:active {
+      outline: 1px solid $Ceramic;
+      border: 1px solid $Ceramic;
+    }
+    &:hover {
+      color: $Ceramic;
+      border: 1px solid $Ceramic;
+    }
+  }
+  .btn-read{
+        &:active {
       outline: 1px solid $Ceramic;
       border: 1px solid $Ceramic;
     }

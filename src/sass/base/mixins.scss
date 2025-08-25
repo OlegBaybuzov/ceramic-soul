@@ -21,3 +21,20 @@
   background-color: transparent;
   cursor: pointer;
 }
+@mixin angel-decoration {
+  &::before, &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $dark;
+  }
+  &::before{
+    width: 1px;
+    height: 200px;
+  }
+  &::after{
+    width: 200px;
+    height: 1px;
+  }
+}

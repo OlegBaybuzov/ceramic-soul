@@ -1,0 +1,108 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+.catalog {
+  padding-top: 50px;
+  &__title {
+    margin-top: 60px;
+  }
+  &__tabs {
+    display: flex;
+    column-gap: 50px;
+    row-gap: 13px;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    border: 1px solid $dark;
+    padding: 13px 25px;
+  }
+  &__tab {
+    border: none;
+    padding: 0;
+    background: none;
+    color: rgba(0, 0, 0, 1);
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    &_active::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: #000;
+      bottom: -1px;
+    }
+  }
+  &__content-item {
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+  }
+  &__content {
+    margin-top: 60px;
+    &-item-wrapper {
+        width: 340px;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+    }
+    &-item-img {
+      width: 340px;
+      height: 198px;
+      object-fit: cover;
+    }
+    &-item-text,
+    &-item-price {
+      color: rgba(0, 0, 0, 1);
+      font-size: 16px;
+      font-weight: 500;
+    }
+    &-item-info {
+      padding: 11px 12px 17px 12px;
+      border: 1px solid $dark;
+      border-top: none;
+    }
+    &-item-price {
+      display: block;
+      margin-top: 8px;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .catalog {
+    &__tabs{
+        width: 460px;
+    }
+    &__content{
+        position: relative;
+        padding: 10px;
+        @include angel-decoration;
+    }
+    &__content-item{
+        flex-direction: row;
+        column-gap: 20px;
+        flex-wrap: wrap;
+        align-items: start;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+    .catalog {
+        &__content{
+            padding: 25px;
+            &-item{
+                gap: 35px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1920px) {
+    .catalog {
+        &__content{
+            &-item{
+                row-gap: 25px;
+                column-gap: 83px;
+            }
+            &-item-wrapper{
+                width: 285px;
+            }
+        }
+    }
+}
