@@ -198,14 +198,17 @@
             <p class="footer__text">Keep up to date with news and promotions</p>
             <form action="#" class="footer__form">
               <input
+                id="email-footer"
                 type="email"
                 class="footer__input"
                 placeholder="Enter your e-mail"
                 name="email"
                 required
               />
+              <div class="error-message-footer"></div>
               <label for="checkbox-footer" class="git__label git__check-block">
                 <input
+                  id="checkbox-footer"
                   class="git__checkbox"
                   type="checkbox"
                   required
@@ -214,6 +217,7 @@
                 />
                 I agree with the <a href="#">terms</a>
               </label>
+              <div class="checkbox-error-message-footer"></div>
               <button class="btn-submit footer__btn">submit</button>
             </form>
           </div>

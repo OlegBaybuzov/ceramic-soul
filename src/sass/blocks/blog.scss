@@ -40,13 +40,23 @@
     transform: translateY(-1px) translateX(-1px);
   }
 }
-
+@media screen and (min-width: 418px) {
+    .blog {
+        &__card {
+            width: 398px;
+            margin: 0 auto;
+        }
+    }
+}
 @media screen and (min-width: 768px) {
   .blog {
     &__wrapper {
       padding: 25px 25px 0 25px;
       position: relative;
       @include angel-decoration;
+    }
+    &__card {
+        width: 100%;
     }
     &__text {
       margin-top: 15px;
@@ -76,7 +86,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1920px) {
   .blog {
     padding-top: 40px;
     &__title {

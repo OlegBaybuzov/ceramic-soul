@@ -1,6 +1,19 @@
 @use "/src/sass/base/variables.scss" as *;
+
 .git {
   padding-top: 60px;
+  .just-validate-error-field {
+    border: none;
+    outline: 1px solid $ui-error;
+    &:hover {
+      border: none;
+      outline: 1px solid $ui-error;
+    }
+    &:focus {
+      border: none;
+      outline: 1px solid $ui-error;
+    }
+  }
   &__wrapper {
     margin-top: 59px;
   }
@@ -61,6 +74,18 @@
     margin-top: 20px;
     display: flex;
     align-items: center;
+    .just-validate-error-field {
+      outline: none;
+      border: none;
+      &:hover {
+        border: none;
+        outline: none;
+      }
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
     a {
       color: rgba(162, 45, 198, 1);
       text-decoration: none;
@@ -72,6 +97,7 @@
     width: 15px;
     height: 15px;
   }
+
   &__btn {
     margin-top: 20px;
   }
@@ -124,6 +150,7 @@
 
 @media screen and (min-width: 1920px) {
   .git {
+    padding-top: 100px;
     &__item_d-none {
       img {
         width: 100%;

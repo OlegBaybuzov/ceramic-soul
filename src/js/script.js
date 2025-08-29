@@ -1,5 +1,6 @@
 import Swiper from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
+import JustValidate from "just-validate";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -69,4 +70,83 @@ try {
   contents.forEach((c, i) => (c.style.display = i === 0 ? "flex" : "none"));
 } catch (e) {}
 
-// Обратите внимание, что значение block (в двух местах) можно спокойно поменять на flex, если вам это необходимо
+try {
+  const validator = new JustValidate(".git__form");
+  validator
+    .addField("#name", [
+      {
+        rule: "required",
+        errorMessage: "Please fill the name",
+      },
+      {
+        rule: "minLength",
+        value: 2,
+      },
+    ])
+    .addField("#email", [
+      {
+        rule: "required",
+      },
+      {
+        rule: "email",
+      },
+    ])
+    .addField(
+      "#question",
+      [
+        {
+          rule: "required",
+        },
+        {
+          rule: "minLength",
+          value: 5,
+        },
+      ],
+      {
+        errorsContainer: document.querySelector(".error-message"),
+      }
+    )
+    .addField(
+      "#checkbox",
+      [
+        {
+          rule: "required",
+        },
+      ],
+      {
+        errorsContainer: document.querySelector(".checkbox-error-message"),
+      }
+    );
+} catch (e) {}
+
+try {
+  const validator__footer = new JustValidate(".footer__form");
+  validator__footer
+    .addField(
+      "#email-footer",
+      [
+        {
+          rule: "required",
+        },
+        {
+          rule: "email",
+        },
+      ],
+      {
+        errorsContainer: document.querySelector(".error-message-footer"),
+      }
+    )
+    .addField(
+      "#checkbox-footer",
+      [
+        {
+          rule: "required",
+        },
+      ],
+      {
+        errorsContainer: document.querySelector(
+          ".checkbox-error-message-footer"
+        ),
+      }
+    );
+} catch (e) {}
