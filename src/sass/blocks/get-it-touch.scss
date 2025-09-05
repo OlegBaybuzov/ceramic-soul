@@ -139,6 +139,9 @@
         box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
       }
     }
+    &__deckor-vase {
+        animation: slideOut 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    }
     &__input {
       &:hover {
         border: none;
